@@ -4,10 +4,10 @@
 #SBATCH --mail-user=khanson15@ku.edu     # Email address
 #SBATCH --partition=sjmac            # Either sixhour or sjmac
 #SBATCH --nodes=1                    # Number of nodes to run on
-#SBATCH --ntasks=1                   # Number of tasks to run (1 with >1 CPUS per task is multithreaded)
+#SBATCH --ntasks=1                   # Number of tasks to run 
 #SBATCH --cpus-per-task=4            # Number of CPUs per task (>1 = multithreaded)
-#SBATCH --mem-per-cpu=2gb            # Memory request (default is 2Gb)
-#SBATCH --time=6:00:00               # Time limit in hrs:min:sec (default for sjmac queue is 8 hrs)
+#SBATCH --mem-per-cpu=2gb            # Memory request
+#SBATCH --time=6:00:00               # Time limit in hrs:min:sec 
 #SBATCH --output=./run_log_files/qc_SNPs_%j.log    # Standard output and error logs
 
 module load R/3.6
