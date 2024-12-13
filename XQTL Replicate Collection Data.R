@@ -209,7 +209,7 @@ mean(Selection_Emergence$Estimated_Females_Tested)
 #This is number we are reffering to when we say approximately 4000 females eggs 
 #were exposed to zinc per replicate. 
 
-#Creating Table 1####
+#Supplementary Table 1####
 #Table presented in the paper is a reorganization/combination of Block_Emergence 
 #and Selection_Emergence. Numbers come directly from those two tables. 
 
@@ -263,5 +263,6 @@ Replicate_Table
 # 11                311             48               576       0.5399306                       3828.00                               8.124347
 # 12                379             48               672       0.5639881                       5173.00                               7.326503
 
-write.csv(Replicate_Table, file = paste("XQTL Block Estimates.csv"), row.names = FALSE)
+Replicate_Table_Rearranged <- Replicate_Table[c(1:2,4,3,6:7,9,8,11:13)]
+write.csv(Replicate_Table, file = paste("Sup Table 1 XQTL Block Estimates.csv"), row.names = FALSE)
 #Column names were slightly adjusted after being exported out of R. 
