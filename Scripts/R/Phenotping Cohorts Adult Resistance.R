@@ -8,7 +8,7 @@
 library(tidyverse)
 library(Rmisc)
 
-#For this analysis you will need PP-2_G2_Adult_Barcodes_11182022 and 
+#For this analysis you will need PP-II_G2_Adult_Barcodes_11182022 and 
 #"PPII_G2_Allscans.txt"
 
 #Read in Data####
