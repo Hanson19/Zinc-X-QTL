@@ -24,9 +24,9 @@ XQTL Location Homeostasis Proteins.R : Plots known zinc homeotasis proteins (ZnT
 ## Phenotyping Analysis
 These scripts analyze phenotyping data from Phenotyping Population I (PP-I), Semi-Inbred Lines, Phenotyping Population II (PP-II), and RNAi KD of candidate genes. There are three main phenotypes that are measured: Zinc naive female adult resistance to zinc, developmental resistance to heavy metals measuring the percentages of eggs that develope to adulthood, developmental resistance to heavy metals measuring how long for eggs to reach adulthood. 
 
-PP-I Scripts:
+X-QTL Subpopulations:
 
-PP-I Adult Analysis.R : Female resistance on 100mM ZnCl2
+XQTL Subpopulations Adult Resistance.R : Female resistance on 100mM ZnCl2
 
 PP-I Developmental Anlaysis.R : Resistance on 25mM ZnCl2 and on water
 
