@@ -323,26 +323,3 @@ t.test(Control$TOD, Zinc$TOD)
 #population 
 
 write.csv(TOD, "Phenotyping Cohorts TOD.csv")
-
-#Supplementary Figure 4: Time of Death of Zinc Naive females on 100mM ZnCl2####
-TOD_Stats <- summarySE(TOD, measurevar = "TOD", groupvars = c("Population"), na.rm = TRUE)
-TOD_Stats$Population[TOD_Stats$Population == "Control"] <- c("Control Non-Selected")
-TOD_Stats$Population[TOD_Stats$Population == "Zinc"] <- c("Zinc Selected")
-head(TOD_Stats)
-#             Population   N      TOD        sd         se         ci
-# 1 Control Non-Selected 501 3.936128 0.9120922 0.04074927 0.08006091
-# 2        Zinc Selected 496 3.564516 0.8714732 0.03913030 0.07688197
-
-title <- expression(paste("PP-II Time of Death of Zinc Naive Adult Females on 100mM ", ZnCl[2]))
-PPII_Adult <- TOD_Stats %>% ggplot(aes(x=Population, y=TOD, color=Population))+
-  geom_errorbar(aes(ymin=TOD-ci, ymax=TOD+ci), width=0.3,linewidth=1, position = position_dodge(.3))+
-  geom_point(size=3, position = position_dodge(.3))+theme_classic()+
-  scale_color_manual(values = c("#00AFBB","#FC4E07"))+
-  ggtitle(title)+
-  ylab("Time of Death (Days)")+
-  xlab("Population")+
-  theme(legend.position = c(.2,.2), text = element_text(size = 10))
-PPII_Adult
-
-TOD %>% ggplot(aes(x=TOD))+geom_histogram(aes(fill=Population), bins=6, color="white")
-TOD %>% ggplot(aes(TOD, fill=Population))+geom_bar(stat = "count", position = position_dodge(0.9))
