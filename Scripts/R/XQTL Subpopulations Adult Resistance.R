@@ -518,3 +518,39 @@ anova(G3_TOD_aov)
 
 #Save TOD data table
 write.csv(TOD, "X-QTL Subpopulations TOD.csv")
+
+#Figure 4 Time of Death of Zinc Naive Females on 100mM ZnCl2####
+TOD_TrtZ$Replicate[TOD_TrtZ$Replicate == "B10"] <- c("R10")
+TOD_TrtZ$Replicate[TOD_TrtZ$Replicate == "B9"] <- c("R9")
+TOD_TrtZ$Replicate <- factor(TOD_TrtZ$Replicate, levels = c("R9", "R10"))
+TOD_TrtZ$Population[TOD_TrtZ$Population == "SelC"] <- c("Control Non-Selected")
+TOD_TrtZ$Population[TOD_TrtZ$Population == "SelZ"] <- c("Zinc Selected")
+
+TOD_Stats <- summarySE(TOD_TrtZ, measurevar = "TOD", groupvars = c("Population", "Replicate", "Gen"), na.rm = TRUE)
+TOD_Stats
+#             Population Replicate    Gen   N      TOD        sd         se         ci
+# 1 Control Non-Selected        R9 Gen. 1 197 3.578680 1.1294537 0.08047024 0.15869868
+# 2 Control Non-Selected        R9 Gen. 3 399 3.215539 0.9738589 0.04875393 0.09584741
+# 3 Control Non-Selected       R10 Gen. 1 199 3.587940 1.0593763 0.07509719 0.14809297
+# 4 Control Non-Selected       R10 Gen. 3 400 3.537500 0.9700238 0.04850119 0.09534981
+# 5        Zinc Selected        R9 Gen. 1 200 3.530000 0.9558600 0.06758951 0.13328357
+# 6        Zinc Selected        R9 Gen. 3 400 3.090000 0.8653161 0.04326580 0.08505743
+# 7        Zinc Selected       R10 Gen. 1 200 3.585000 0.9785514 0.06919403 0.13644762
+# 8        Zinc Selected       R10 Gen. 3 397 3.377834 0.9735452 0.04886083 0.09605906
+
+title <- expression(paste("Time of Death of Zinc Naive Adult Females on 100mM ", ZnCl[2]))
+
+TOD_plot <- TOD_Stats %>% ggplot(aes(x=Replicate, y=TOD, color=Population))+
+  geom_errorbar(aes(ymin=TOD-ci, ymax=TOD+ci), width=0.3,linewidth=1, position = position_dodge(.3))+
+  geom_point(size=3, position = position_dodge(.3))+theme_classic()+
+  scale_color_manual(values = c("#00AFBB","#FC4E07"))+
+  ggtitle(title)+
+  facet_wrap(~Gen, strip.position = "bottom")+
+  ylab("Time of Death (Days)")+
+  theme(legend.position = c(.2,.2), text = element_text(size = 10))
+TOD_plot
+
+TOD_TrtZ %>% ggplot(aes(x=Replicate, y=TOD, color=Population))+
+  geom_violin()+
+  facet_wrap(~Gen)+
+  theme_bw()
