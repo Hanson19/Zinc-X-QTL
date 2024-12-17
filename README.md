@@ -22,7 +22,7 @@ XQTL Founder Frequency Visualization.R : Creates supplemental figures that plots
 XQTL Location Homeostasis Proteins.R : Plots known zinc homeotasis proteins (ZnTs, Zips, MTs, and MTF-1) agaisnt backdrop of our identified QTL. 
 
 ## Phenotyping Analysis
-These scripts analyze phenotyping data from Phenotyping Population I (PP-I), Semi-Inbred Lines, Phenotyping Population II (PP-II), and RNAi KD of candidate genes. There are three main phenotypes that are measured: Zinc naive female adult resistance to zinc, developmental resistance to heavy metals measuring the percentages of eggs that develope to adulthood, developmental resistance to heavy metals measuring how long for eggs to reach adulthood. 
+These scripts analyze phenotyping data from X-QTL Subpopulations, Semi-Inbred Lines, Phenotyping Cohort, and RNAi KD of candidate genes. There are three main phenotypes that are measured: Zinc naive female adult resistance to zinc, developmental resistance to heavy metals measuring the percentages of eggs that develope to adulthood, developmental resistance to heavy metals measuring how long for eggs to reach adulthood. 
 
 X-QTL Subpopulations:
 
@@ -34,9 +34,9 @@ Semi-Inbred Line Analysis Scripts:
 
 Semi-Inbred Line Analysis.R : Developmental resistance of semi-inbred lines on a variety of heavy metals
 
-PP-II Scripts:
+Phenotyping Cohorts:
 
-PP-II Adult Analysis.R : Female resistance on 100mM ZnCl2
+Phenotyping Cohorts Adult Resistance.R : Female resistance on 100mM ZnCl2
 
 PP-II Developmental Analysis.R : Developmental resistance of flies on a variety of heavy metals.
 
