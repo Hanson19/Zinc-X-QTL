@@ -588,7 +588,7 @@ anova(H2O_aov_devl)
 #Population:Sex    1    2.2   2.175  0.8229 0.3644    
 #Residuals      3345 8842.9   2.64
 
-#Sup Fig 3A & Fig4C####
+#Sup Fig 4A & Fig4C####
 All_rep$Treatment <- factor(All_rep$Treatment, levels = c("H2O","25mM_ZnCl2",
                                                           "0.2mM_CdCl2","2mM_CuSO4"))
 
