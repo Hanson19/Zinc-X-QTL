@@ -28,7 +28,7 @@ X-QTL Subpopulations:
 
 XQTL Subpopulations Adult Resistance.R : Female resistance on 100mM ZnCl2
 
-xQTL Subpopulations Developmental Resistance.R : Resistance on 25mM ZnCl2 and on water. Plots figures 3A and 4A.
+XQTL Subpopulations Developmental Resistance.R : Resistance on 25mM ZnCl2 and on water. Plots figures 3A and 4A.
 
 Semi-Inbred Line Analysis Scripts:
 
