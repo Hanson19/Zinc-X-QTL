@@ -40,7 +40,7 @@ Phenotyping Cohorts Adult Resistance.R : Female resistance on 100mM ZnCl2
 
 Sup_Fig_5_Adult_Resistance.R: Plotting adult zinc resistance from the X-QTL Subpopulations and Phenotyping Cohorts. Need tables made in X-QTL and Phenotyping Cohorts Adult Resistance.R
 
-PP-II Developmental Analysis.R : Developmental resistance of flies on a variety of heavy metals.
+Phenotyping Cohorts Development Analysis : Developmental resistance of flies on a variety of heavy metals. Plots Figures 3C, 4C and Supplementary Figures 3A and 4A
 
 RNAi Candidate Genes:
 
