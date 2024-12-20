@@ -44,5 +44,5 @@ Phenotyping Cohorts Development Analysis : Developmental resistance of flies on 
 
 RNAi Candidate Genes:
 
-RNAi Analysis.R : Developmental resistance of candidate gene RNAi KDs on 10mM ZnCl2. 
+RNAi Analysis.R : Developmental resistance of candidate gene RNAi KDs on 10mM ZnCl2. Plots Figure 5, Supplementary Figures 3 & 4, data for Table 2, Supplementary Table 5 and 6
 
